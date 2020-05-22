@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="1068.0" style="-fx-background-color: #002A32;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shop.graphics.AppController">
+    <children>
+        <AnchorPane prefHeight="572.0" prefWidth="1075.0" style="-fx-background-color: linear-gradient(to left bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);;">
+            <children>
+                <VBox layoutX="212.0" layoutY="-1.0" prefHeight="572.0" prefWidth="863.0">
+                    <children>
+                        <TableView fx:id="table" prefHeight="572.0" prefWidth="869.0">
+                            <columns>
+                                <TableColumn fx:id="productIdColumn" prefWidth="68.0" text="id" />
+                                <TableColumn fx:id="categoryNameColumn" prefWidth="128.0" text="Category" />
+                                <TableColumn fx:id="productNameColumn" prefWidth="120.79995727539062" text="Product name" />
+                                <TableColumn fx:id="costColumn" minWidth="0.0" prefWidth="72.79998779296875" text="cost" />
+                                <TableColumn fx:id="descriptionColumn" prefWidth="285.59991455078125" text="description">
+                                    <columns>
+                                        <TableColumn fx:id="maintainerColumn" prefWidth="76.00006103515625" text="maintainer" />
+                                        <TableColumn fx:id="characteristicsColumn" prefWidth="224.5999755859375" text="characteristics" />
+                                    </columns>
+                                </TableColumn>
+                                <TableColumn fx:id="warehouseAddressColumn" prefWidth="188.0001220703125" text="warehouse_address" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+                <CheckBox fx:id="vacuumCategory" layoutX="4.0" layoutY="413.0" mnemonicParsing="false" text="Vacuum cleaners" />
+                <CheckBox fx:id="refCategory" layoutX="4.0" layoutY="386.0" mnemonicParsing="false" text="Refrigerators" />
+                <CheckBox fx:id="washCategory" layoutX="4.0" layoutY="359.0" mnemonicParsing="false" text="Washing machines" />
+                <CheckBox fx:id="freezersCategory" layoutX="127.0" layoutY="440.0" mnemonicParsing="false" text="Freezers" />
+                <CheckBox fx:id="blenderCategory" layoutX="128.0" layoutY="359.0" mnemonicParsing="false" text="Blenders " />
+                <Label layoutX="5.0" layoutY="307.0" prefHeight="51.0" prefWidth="183.0" text="Select category">
+                    <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.9809160141544488">
+                            <stops>
+                                <Stop color="#010500" />
+                                <Stop color="WHITE" offset="1.0" />
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+                <Button fx:id="clearButton" layoutX="4.0" layoutY="283.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="83.0" style="-fx-background-color: linear-gradient(to right, #5f2966, #56316c, #4c386f, #433e72, #3b4372, #2e507e, #1d5d88, #00698e, #008093, #00947a, #42a24c, #9ca711);;" text="Clear" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="removeButton" layoutX="4.0" layoutY="237.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="83.0" style="-fx-background-color: linear-gradient(to right, #5f2966, #56316c, #4c386f, #433e72, #3b4372, #2e507e, #1d5d88, #00698e, #008093, #00947a, #42a24c, #9ca711);;" text="Remove" textFill="WHITE" />
+                <Button fx:id="resetButton" layoutX="107.0" layoutY="283.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="83.0" style="-fx-background-color: linear-gradient(to right, #5f2966, #56316c, #4c386f, #433e72, #3b4372, #2e507e, #1d5d88, #00698e, #008093, #00947a, #42a24c, #9ca711);;" text="Reset" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="loadDefaultDataButton" layoutX="107.0" layoutY="237.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="83.0" style="-fx-background-color: linear-gradient(to right, #5f2966, #56316c, #4c386f, #433e72, #3b4372, #2e507e, #1d5d88, #00698e, #008093, #00947a, #42a24c, #9ca711);;" text="Init tables" textFill="WHITE" />
+                <Button fx:id="searchButton" layoutX="28.0" layoutY="159.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: linear-gradient(to right, #5f2966, #56316c, #4c386f, #433e72, #3b4372, #2e507e, #1d5d88, #00698e, #008093, #00947a, #42a24c, #9ca711);;" text="Search" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="12.0" />
+                    </font>
+                </Button>
+                <CheckBox fx:id="costSearchBtn" layoutX="4.0" layoutY="64.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="76.0" text="By cost" />
+                <CheckBox fx:id="categoryNameSearchBtn" layoutX="4.0" layoutY="98.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="94.0" text="By category" />
+                <Label layoutX="8.0" layoutY="14.0" prefHeight="34.0" prefWidth="150.0" text="Search">
+                    <font>
+                        <Font name="System Bold Italic" size="27.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.6564885332384183">
+                            <stops>
+                                <Stop color="#010500" />
+                                <Stop color="#f8f8f8b5" offset="1.0" />
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+                <TextField fx:id="costSearchPredicateField" disable="true" layoutX="101.0" layoutY="57.0" prefHeight="31.0" prefWidth="104.0" promptText="Enter range" style="-fx-background-color: WHITE;" />
+                <TextField fx:id="categorySearchPredicateField" disable="true" layoutX="101.0" layoutY="91.0" prefHeight="31.0" prefWidth="104.0" promptText="Search predicate" style="-fx-background-color: WHITE;" />
+                <Label layoutX="5.0" layoutY="187.0" prefHeight="34.0" prefWidth="149.0" text="Controllers">
+                    <font>
+                        <Font name="System Bold Italic" size="28.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.977099237551216">
+                            <stops>
+                                <Stop color="BLACK" />
+                                <Stop color="WHITE" offset="1.0" />
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+                <CheckBox fx:id="steamersCategory" layoutX="127.0" layoutY="386.0" mnemonicParsing="false" text="Steamers " />
+                <CheckBox fx:id="flatironCategory" layoutX="127.0" layoutY="413.0" mnemonicParsing="false" text="Flatirons" />
+                <CheckBox fx:id="boilersCategory" layoutX="4.0" layoutY="440.0" mnemonicParsing="false" text="Boilers" />
+                <CheckBox fx:id="selectAllBtn" layoutX="52.0" layoutY="486.0" mnemonicParsing="false" text="SELECT ALL" />
+                <Button fx:id="getListButton" layoutX="32.0" layoutY="521.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="130.0" style="-fx-background-color: linear-gradient(to right, #5f2966, #56316c, #4c386f, #433e72, #3b4372, #2e507e, #1d5d88, #00698e, #008093, #00947a, #42a24c, #9ca711);;" text="Get product list" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="12.0" />
+                    </font>
+                </Button>
+            <CheckBox fx:id="textSearchBtn" layoutX="4.0" layoutY="132.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="94.0" text="By text" />
+            <TextField fx:id="textSearchPredicateField" disable="true" layoutX="101.0" layoutY="125.0" prefHeight="31.0" prefWidth="104.0" promptText="text" style="-fx-background-color: WHITE;" />
+            </children></AnchorPane>
+    </children>
+</AnchorPane>
